@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Epilepsy-iEEG-Multicenter-Dataset",
-  "description": "A multicenter retrospective study of intracranial EEG (iEEG) data from 100 subjects across 5 epilepsy centers, with 4 centers' data publicly available. The dataset includes electrocorticography (ECoG) and stereoelectroencephalography (SEEG) recordings organized around seizure events, with clinical annotations of seizure onset zones and surgical resection sites. This resource supports research on neural fragility as an EEG marker for identifying epileptogenic brain regions.",
-  "methods_description": "iEEG data were acquired as EDF files and converted to BrainVision format using mne_bids. For SEEG implantations, electrode anatomical locations were manually marked by clinicians and categorized as white matter, gray matter, ventricle, cerebrospinal fluid, or outside brain. Clinical event markers annotate seizure onsets/offsets (electrographic and clinical), ICTAL SPECT imaging periods, and seizure spread patterns. Surgical resection sites were determined from postoperative MRI or estimated from surgical notes, with manual visual inspection comparing postoperative T1 MRI against post-SEEG CT scans for ambiguous cases.",
+  "description": "A multicenter retrospective study of intracranial EEG (iEEG) data from 100 subjects across 5 epilepsy centers, with 4 centers' data publicly available. The dataset includes electrocorticography (ECoG) and stereotactic EEG (SEEG) recordings organized around seizure events, with clinical annotations of seizure onset zones and surgical resection sites. This resource supports research on neural fragility as an electrophysiological marker for identifying seizure onset zones in epilepsy patients.",
+  "methods_description": "iEEG data were acquired as ECoG and SEEG recordings from epilepsy patients undergoing clinical monitoring. Raw EDF files were converted to BrainVision format using mne_bids. For SEEG implantations, electrode anatomical locations were manually marked by clinicians and categorized as white matter, gray matter, ventricle, cerebrospinal fluid, or outside brain. Seizure events were annotated by clinicians with electrographic and clinical onset/offset markers, and surgical resection zones were determined from postoperative MRI or manual visual inspection of CT/MRI coregistrations.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -34,24 +34,24 @@
       "term": "intracranial EEG"
     },
     {
-      "term": "Electrocorticography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D000069280"
+      "term": "electrocorticography"
     },
     {
-      "term": "epilepsy"
+      "term": "stereotactic EEG"
     },
     {
       "term": "seizure onset zone"
     },
     {
+      "term": "Epilepsy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004827"
+    },
+    {
       "term": "neural fragility"
     },
     {
-      "term": "SEEG"
-    },
-    {
-      "term": "multicenter study"
+      "term": "epilepsy surgery"
     }
   ],
   "related_identifiers": [
