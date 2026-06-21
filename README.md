@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.on003029-blue)](https://doi.org/10.82901/nemar.on003029)
+
 Fragility Multi-Center Retrospective Study
 ------------------------------------------
 
