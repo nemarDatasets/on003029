@@ -9,3 +9,4 @@ sub-*/**/*CT.nii*
 *.ppm
 *.png
 *.mat.nemar/
+.nemar/

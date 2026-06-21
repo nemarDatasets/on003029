@@ -2,6 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Epilepsy-iEEG-Multicenter-Dataset",
+  "description": "A multicenter retrospective study of intracranial EEG (iEEG) data from 100 subjects across 5 epilepsy centers, with 4 centers' data publicly available. The dataset includes electrocorticography (ECoG) and stereoelectroencephalography (SEEG) recordings organized around seizure events, with clinical annotations of seizure onset zones and surgical resection sites. This resource supports research on neural fragility as an EEG marker for identifying epileptogenic brain regions.",
+  "methods_description": "iEEG data were acquired as EDF files and converted to BrainVision format using mne_bids. For SEEG implantations, electrode anatomical locations were manually marked by clinicians and categorized as white matter, gray matter, ventricle, cerebrospinal fluid, or outside brain. Clinical event markers annotate seizure onsets/offsets (electrographic and clinical), ICTAL SPECT imaging periods, and seizure spread patterns. Surgical resection sites were determined from postoperative MRI or estimated from surgical notes, with manual visual inspection comparing postoperative T1 MRI against post-SEEG CT scans for ambiguous cases.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -27,12 +29,32 @@
     "Jennifer Haagensen": {},
     "Sridevi Sarma": {}
   },
-  "related_identifiers": [
+  "keywords": [
     {
-      "identifier": "10.18112/openneuro.ds003029.v1.0.5",
-      "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
+      "term": "intracranial EEG"
     },
+    {
+      "term": "Electrocorticography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D000069280"
+    },
+    {
+      "term": "epilepsy"
+    },
+    {
+      "term": "seizure onset zone"
+    },
+    {
+      "term": "neural fragility"
+    },
+    {
+      "term": "SEEG"
+    },
+    {
+      "term": "multicenter study"
+    }
+  ],
+  "related_identifiers": [
     {
       "identifier": "https://github.com/nemarDatasets/on003029",
       "identifier_type": "URL",
@@ -57,6 +79,11 @@
       "identifier": "10.1038/s41597-019-0105-7",
       "identifier_type": "DOI",
       "relation_type": "References"
+    },
+    {
+      "identifier": "10.18112/openneuro.ds003029.v1.0.5",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
     }
   ],
   "funding_references": [
@@ -96,12 +123,12 @@
     }
   ],
   "resource_type_general": "Dataset",
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
-    "0.0 KB (1 files)"
+    "10.8 GB (317 files)"
   ],
   "formats": [
     ".eeg",
@@ -111,32 +138,8 @@
     ".tsv",
     ".vhdr",
     ".vmrk",
-    ".xlsx"
+    ".xlsx",
+    ".yml"
   ],
-  "description": "A multicenter retrospective intracranial EEG dataset comprising 100 subjects from 5 epilepsy centers, with 4 centers' data publicly available. The dataset includes ECoG and SEEG recordings with clinician-annotated seizure events, seizure onset zone localizations, and surgical resection/ablation information. This resource supports research on neural fragility as an electrophysiological marker for identifying the seizure onset zone in epilepsy patients.",
-  "methods_description": "iEEG data were acquired as ECoG and SEEG recordings from epilepsy patients across multiple centers. Raw EDF files were converted to BrainVision format using mne_bids. For SEEG implantations, electrode anatomical locations were manually marked by clinicians and categorized as white matter, gray matter, ventricle, cerebrospinal fluid, or outside brain. Seizure events were annotated by clinicians with electrographic and clinical onset/offset markers, and seizure onset zone electrodes were identified. Post-surgical electrode locations were determined through comparison of postoperative MRI with pre-implantation imaging.",
-  "keywords": [
-    {
-      "term": "intracranial EEG"
-    },
-    {
-      "term": "epilepsy"
-    },
-    {
-      "term": "seizure onset zone"
-    },
-    {
-      "term": "ECoG"
-    },
-    {
-      "term": "SEEG"
-    },
-    {
-      "term": "neural fragility"
-    },
-    {
-      "term": "multicenter study"
-    }
-  ],
-  "source_hash": "5ca9d1f3519d0bdea88e0039bdc7921ac973686d3ed5f22d317330b077017cf1"
+  "source_hash": "9ebb26ca179abf8e3dfbb814bfd27ca133001019bd2578fe95b6b383d3bd8d37"
 }
