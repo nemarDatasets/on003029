@@ -1,18 +1,24 @@
 {
   "version": "2.0",
-  "dataset_id": "on003029",
-  "source": "openneuro",
-  "source_id": "ds003029",
+  "pipeline_stage": "validated",
   "title": "Epilepsy-iEEG-Multicenter-Dataset",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
-    "Adam Li": {},
+    "Adam Li": {
+      "orcid": "0000-0001-8421-365X"
+    },
     "Sara Inati": {},
     "Kareem Zaghloul": {},
-    "Nathan Crone": {},
+    "Nathan Crone": {
+      "orcid": "0000-0001-7950-2617"
+    },
     "William Anderson": {},
     "Emily Johnson": {},
     "Iahn Cajigas": {},
-    "Damian Brusko": {},
+    "Damian Brusko": {
+      "orcid": "0000-0003-0110-4576"
+    },
     "Jonathan Jagid": {},
     "Angel Claudio": {},
     "Andres Kanner": {},
@@ -21,30 +27,39 @@
     "Jennifer Haagensen": {},
     "Sridevi Sarma": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds003029.v1.0.5",
       "identifier_type": "DOI",
       "relation_type": "IsIdenticalTo"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on003029",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=on003029",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.1101/862797",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.21105/joss.01896",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "10.1038/s41597-019-0105-7",
+      "identifier_type": "DOI",
+      "relation_type": "References"
     }
   ],
-  "pipeline_stage": "seeded",
-  "bids_version": "1.4.0",
-  "recording_modality": [
-    "ieeg"
-  ],
-  "datatypes": [
-    "ieeg"
-  ],
   "funding_references": [
-    {
-      "funder_name": "NIH T32 EB003383"
-    },
-    {
-      "funder_name": "NSF GRFP (DGE-1746891)"
-    },
     {
       "funder_name": "ARCS Scholarship"
     },
@@ -55,20 +70,73 @@
       "funder_name": "Chateaubriand Fellowship"
     },
     {
-      "funder_name": "NIH R21 NS103113"
-    },
-    {
       "funder_name": "Coulter Foundation"
     },
     {
       "funder_name": "Maryland Innovation Initiative"
     },
     {
-      "funder_name": "US NSF Career Award 1055560"
+      "funder_name": "Burroughs Well CASI Award 1007274"
     },
     {
-      "funder_name": "Burroughs Well CASI Award 1007274"
+      "funder_name": "NIH",
+      "award_number": "T32 EB003383"
+    },
+    {
+      "funder_name": "NSF",
+      "award_number": "DGE-1746891"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "R21 NS103113"
+    },
+    {
+      "funder_name": "NSF",
+      "award_number": "1055560"
     }
   ],
-  "acknowledgements": "Maryland Advanced Research Computing Center (MARCC)"
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "0.0 KB (1 files)"
+  ],
+  "formats": [
+    ".eeg",
+    ".gitattributes",
+    ".json",
+    ".md",
+    ".tsv",
+    ".vhdr",
+    ".vmrk",
+    ".xlsx"
+  ],
+  "description": "A multicenter retrospective intracranial EEG dataset comprising 100 subjects from 5 epilepsy centers, with 4 centers' data publicly available. The dataset includes ECoG and SEEG recordings with clinician-annotated seizure events, seizure onset zone localizations, and surgical resection/ablation information. This resource supports research on neural fragility as an electrophysiological marker for identifying the seizure onset zone in epilepsy patients.",
+  "methods_description": "iEEG data were acquired as ECoG and SEEG recordings from epilepsy patients across multiple centers. Raw EDF files were converted to BrainVision format using mne_bids. For SEEG implantations, electrode anatomical locations were manually marked by clinicians and categorized as white matter, gray matter, ventricle, cerebrospinal fluid, or outside brain. Seizure events were annotated by clinicians with electrographic and clinical onset/offset markers, and seizure onset zone electrodes were identified. Post-surgical electrode locations were determined through comparison of postoperative MRI with pre-implantation imaging.",
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "epilepsy"
+    },
+    {
+      "term": "seizure onset zone"
+    },
+    {
+      "term": "ECoG"
+    },
+    {
+      "term": "SEEG"
+    },
+    {
+      "term": "neural fragility"
+    },
+    {
+      "term": "multicenter study"
+    }
+  ],
+  "source_hash": "5ca9d1f3519d0bdea88e0039bdc7921ac973686d3ed5f22d317330b077017cf1"
 }

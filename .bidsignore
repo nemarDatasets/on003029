@@ -8,4 +8,4 @@ sub-*/**/*CT.nii*
 *.txt
 *.ppm
 *.png
-*.mat
+*.mat.nemar/
