@@ -98,3 +98,31 @@ References
 [3] Holdgraf, C., Appelhoff, S., Bickel, S., Bouchard, K., D'Ambrosio, S., David, O., … Hermes, D. (2019). iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology. Scientific Data, 6, 102. https://doi.org/10.1038/s41597-019-0105-7
 
 [4] Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
+
+## BrainVision header sampling interval (19 Oct 2026)
+
+In 41 of the 106 recordings the `.vhdr` header gave a sampling interval that did not match the sampling frequency of the sidecars (`*_ieeg.json` SamplingFrequency, channels.tsv sampling_frequency). The headers were written by pybv 0.2.0 (`;Written using pybv 0.2.0`), whose writer prints `SamplingInterval={}'.format(int(1e6 / sfreq))`: the interval in microseconds was truncated to an integer. Where 1e6 / sfreq is not a whole number, or is a hair below one (1e6 / 1000.0000000000001 = 999.9999999999999 -> 999), the header rate was wrong. Readers that take the rate from the header (MNE / mne_bids, EEGLAB, FieldTrip, EEGDash) used, for example, 1001.001 Hz instead of 1000 Hz for sub-jh104 and sub-jh106, so event times, durations and frequencies were off by up to 0.2 %.
+
+Since 19 Oct 2026, `SamplingInterval` = 1e6 / SamplingFrequency of the run's `_ieeg.json`, written the way pybv 0.4.0 and later write it (`SamplingInterval={1e6 / sfreq}`; pybv 0.2.0 and 0.3.0 truncate), and as 1000 or 500 us where the sidecar value is 1000 or 2000 Hz plus floating-point noise (1000.0000000000001, 2000.0000000000002). Only that line changed; the rest of each header and the binary `.eeg` data are byte-for-byte unchanged.
+
+| old SamplingInterval (rate read) | new SamplingInterval (rate read) | sidecar SamplingFrequency | runs |
+|---|---|---|---|
+| 1000 us (1000.000 Hz) | 1000.5882352941176 us (999.412 Hz) | 999.4121105232217 | 13: umf001 run-01, umf002 run-01, umf004 run-01, ummc005 run-01, ummc005 run-02, ummc007 run-01, ummc007 run-02, ummc007 run-03, ummc008 run-02, ummc008 run-03, ummc009 run-01, ummc009 run-02, ummc009 run-03 |
+| 999 us (1001.001 Hz) | 1000 us (1000.000 Hz) | 1000.0000000000001 | 7: jh104 run-01, jh104 run-02, jh104 run-03, jh104 run-04, jh104 run-05, jh104 run-06, jh106 run-01 |
+| 499 us (2004.008 Hz) | 500 us (2000.000 Hz) | 2000.0000000000002 | 3: pt17 run-01, pt17 run-02, pt17 run-03 |
+| 2001 us (499.750 Hz) | 2001.172268907563 us (499.707 Hz) | 499.7071044492829 | 7: umf003 run-01, ummc001 run-01, ummc001 run-02, ummc001 run-03, ummc002 run-01, ummc002 run-02, ummc002 run-03 |
+| 975 us (1025.641 Hz) | 975.9908256880735 us (1024.600 Hz) | 1024.5997950800408 | 1: umf005 run-01 |
+| 4002 us (249.875 Hz) | 4002.344537815126 us (249.854 Hz) | 249.85355222464145 | 10: ummc003 run-01, ummc003 run-02, ummc003 run-03, ummc004 run-01, ummc004 run-02, ummc004 run-03, ummc006 run-01, ummc006 run-02, ummc006 run-03, ummc008 run-01 |
+
+The sidecar rate is the right one. These checks were run on the files for every run: (1) `int(1e6 / SamplingFrequency)` gives exactly the old header value in all 41 runs; (2) events.tsv `sample` = round(onset x SamplingFrequency) in all 106 runs (at the old header rate, up to 196 samples off); (3) `RecordingDuration` = (number of samples - 1) / SamplingFrequency in every run whose `.eeg` is complete (37 of the 41).
+
+These 41 `.vhdr` files were git-annex files. They are now plain git files, because the edited content has no annexed copy on the dataset storage.
+
+## participants.json levels (19 Oct 2026)
+
+The `Levels` of engel_score, ilae_score and ethnicity were keyed "1", "-1", ..., while participants.tsv stores "1.0", "-1.0", ...; the site levels were lower case ("jhh") while participants.tsv says "JHH". The bids-validator reported TSV_VALUE_INCORRECT_TYPE for these 4 columns. The keys now equal the values used in participants.tsv. The level descriptions and participants.tsv are unchanged.
+
+## Known issues not fixed (19 Oct 2026)
+
+- sub-umf002, sub-umf003, sub-umf004 and sub-umf005 (run-01): the `.eeg` file holds only 0.7 to 2.0 s of data (e.g. 690,980 bytes for 129 float32 channels, not a whole number of 516-byte samples), while RecordingDuration says 194 to 257 s and both events (onsets 131 to 188 s) lie beyond the end of the data. The released data files are truncated. Metadata edits cannot repair them.
+- There is no electrodes.tsv (bids-validator IEEG_ELECTRODES_REQUIRED): electrode positions are not part of the release.

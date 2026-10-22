@@ -1,1 +1,78 @@
-../../../.git/annex/objects/Z9/Qk/MD5E-s1743--9ac47e330890fa1e818c6bd0691ea118.vhdr/MD5E-s1743--9ac47e330890fa1e818c6bd0691ea118.vhdr
+Brain Vision Data Exchange Header File Version 1.0
+;Written using pybv 0.2.0
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-pt17_ses-presurgery_task-ictal_acq-ecog_run-02_ieeg.eeg
+MarkerFile=sub-pt17_ses-presurgery_task-ictal_acq-ecog_run-02_ieeg.vmrk
+DataFormat=BINARY
+; DataOrientation: MULTIPLEXED=ch1,pt1, ch2,pt1 ...
+DataOrientation=MULTIPLEXED
+NumberOfChannels=53
+; Sampling interval in microseconds
+SamplingInterval=500
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+; Each entry: Ch<Channel number>=<Name>,<Reference channel name>,
+; <Resolution in "unit">,<unit>,Future extensions…
+; Fields are delimited by commas, some fields might be omitted (empty).
+; Commas in channel names are coded as "\1".
+Ch1=OF1,,1.000,nV
+Ch2=OF2,,1.000,nV
+Ch3=OF3,,1.000,nV
+Ch4=OF4,,1.000,nV
+Ch5=TT1,,1.000,nV
+Ch6=TT2,,1.000,nV
+Ch7=TT3,,1.000,nV
+Ch8=TT4,,1.000,nV
+Ch9=TT5,,1.000,nV
+Ch10=TT6,,1.000,nV
+Ch11=AST3,,1.000,nV
+Ch12=AST4,,1.000,nV
+Ch13=MST1,,1.000,nV
+Ch14=MST2,,1.000,nV
+Ch15=MST3,,1.000,nV
+Ch16=MST4,,1.000,nV
+Ch17=PST1,,1.000,nV
+Ch18=PST2,,1.000,nV
+Ch19=PST3,,1.000,nV
+Ch20=E,,1.000,nV
+Ch21=PST4,,1.000,nV
+Ch22=G4,,1.000,nV
+Ch23=AST1,,1.000,nV
+Ch24=AST2,,1.000,nV
+Ch25=G5,,1.000,nV
+Ch26=G6,,1.000,nV
+Ch27=G7,,1.000,nV
+Ch28=G8,,1.000,nV
+Ch29=G12,,1.000,nV
+Ch30=G13,,1.000,nV
+Ch31=G14,,1.000,nV
+Ch32=G15,,1.000,nV
+Ch33=G16,,1.000,nV
+Ch34=G19,,1.000,nV
+Ch35=G20,,1.000,nV
+Ch36=G21,,1.000,nV
+Ch37=G22,,1.000,nV
+Ch38=DC01,,1.000,nV
+Ch39=DC02,,1.000,nV
+Ch40=DC03,,1.000,nV
+Ch41=DC04,,1.000,nV
+Ch42=G23,,1.000,nV
+Ch43=G24,,1.000,nV
+Ch44=$AST1,,1.000,nV
+Ch45=$AST2,,1.000,nV
+Ch46=G27,,1.000,nV
+Ch47=G28,,1.000,nV
+Ch48=G29,,1.000,nV
+Ch49=G30,,1.000,nV
+Ch50=G31,,1.000,nV
+Ch51=G32,,1.000,nV
+Ch52=EKG,,1.000,nV
+Ch53=A64,,1.000,nV
+
+[Comment]
+

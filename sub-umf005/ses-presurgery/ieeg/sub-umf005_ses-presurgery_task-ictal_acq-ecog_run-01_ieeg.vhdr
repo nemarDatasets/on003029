@@ -1,1 +1,72 @@
-../../../.git/annex/objects/Z7/Xz/MD5E-s1676--8a075b785979a55e8c84a025f2040f2e.vhdr/MD5E-s1676--8a075b785979a55e8c84a025f2040f2e.vhdr
+Brain Vision Data Exchange Header File Version 1.0
+;Written using pybv 0.2.0
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-umf005_ses-presurgery_task-ictal_acq-ecog_run-01_ieeg.eeg
+MarkerFile=sub-umf005_ses-presurgery_task-ictal_acq-ecog_run-01_ieeg.vmrk
+DataFormat=BINARY
+; DataOrientation: MULTIPLEXED=ch1,pt1, ch2,pt1 ...
+DataOrientation=MULTIPLEXED
+NumberOfChannels=47
+; Sampling interval in microseconds
+SamplingInterval=975.9908256880735
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+; Each entry: Ch<Channel number>=<Name>,<Reference channel name>,
+; <Resolution in "unit">,<unit>,Future extensions…
+; Fields are delimited by commas, some fields might be omitted (empty).
+; Commas in channel names are coded as "\1".
+Ch1=EVENT,,1.000,nV
+Ch2=LLAT1,,1.000,nV
+Ch3=LLAT3,,1.000,nV
+Ch4=LABT3,,1.000,nV
+Ch5=RLAT1,,1.000,nV
+Ch6=RLAT6,,1.000,nV
+Ch7=LLAT4,,1.000,nV
+Ch8=LABT4,,1.000,nV
+Ch9=RLAT2,,1.000,nV
+Ch10=LABT2,,1.000,nV
+Ch11=LLAT5,,1.000,nV
+Ch12=LPBT1,,1.000,nV
+Ch13=LLAT2,,1.000,nV
+Ch14=LABT1,,1.000,nV
+Ch15=LPBT3,,1.000,nV
+Ch16=RLAT5,,1.000,nV
+Ch17=RABT1,,1.000,nV
+Ch18=LLAT6,,1.000,nV
+Ch19=LPBT2,,1.000,nV
+Ch20=RLAT4,,1.000,nV
+Ch21=LPBT4,,1.000,nV
+Ch22=FPZ,,1.000,nV
+Ch23=RLAT3,,1.000,nV
+Ch24=X1,,1.000,nV
+Ch25=X2,,1.000,nV
+Ch26=RABT2,,1.000,nV
+Ch27=RABT3,,1.000,nV
+Ch28=RABT4,,1.000,nV
+Ch29=RPBT1,,1.000,nV
+Ch30=RPBT2,,1.000,nV
+Ch31=RPBT3,,1.000,nV
+Ch32=RPBT4,,1.000,nV
+Ch33=X10,,1.000,nV
+Ch34=X11,,1.000,nV
+Ch35=X12,,1.000,nV
+Ch36=X13,,1.000,nV
+Ch37=X14,,1.000,nV
+Ch38=X15,,1.000,nV
+Ch39=X16,,1.000,nV
+Ch40=X17,,1.000,nV
+Ch41=X18,,1.000,nV
+Ch42=DC1,,1.000,nV
+Ch43=DC2,,1.000,nV
+Ch44=DC3,,1.000,nV
+Ch45=DC4,,1.000,nV
+Ch46=OSAT,,1.000,nV
+Ch47=PR,,1.000,nV
+
+[Comment]
+

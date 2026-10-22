@@ -32,33 +32,33 @@
   "engel_score": {
     "Description": "A clinical classification from 1-4. See literature for better overview.",
     "Levels": {
-      "1": "seizure free",
-      "2": "significant seizure frequency reduction",
-      "3": "slight seizure frequency reduction",
-      "4": "no change",
-      "-1": "no surgery, or outcome"
+      "1.0": "seizure free",
+      "2.0": "significant seizure frequency reduction",
+      "3.0": "slight seizure frequency reduction",
+      "4.0": "no change",
+      "-1.0": "no surgery, or outcome"
     }
   },
   "ilae_score": {
     "Description": "A clinical classification from 1-4.",
     "Levels": {
-      "1": "seizure free",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "-1": "no surgery, or outcome"
+      "1.0": "seizure free",
+      "2.0": "",
+      "3.0": "",
+      "4.0": "",
+      "5.0": "",
+      "6.0": "",
+      "-1.0": "no surgery, or outcome"
     }
   },
   "ethnicity": {
     "Description": "The ethnicity of the subject (Caucasian, African American, Hispanic andAsian are included).",
     "Levels": {
-      "0": "caucasian",
-      "1": "african-american",
-      "2": "hispanic",
-      "3": "asian",
-      "-1": "unknown"
+      "0.0": "caucasian",
+      "1.0": "african-american",
+      "2.0": "hispanic",
+      "3.0": "asian",
+      "-1.0": "unknown"
     }
   },
   "date_follow_up": {
@@ -70,11 +70,11 @@
   "site": {
     "Description": "The clinical site for the subject",
     "Levels": {
-      "nih": "National Institute of Health",
-      "ummc": "University of Maryland Medical Center",
-      "jhh": "Johns Hopkins Hospital",
-      "umf": "University of Miami Florida Hospital",
-      "cc": "Cleveland Clinic"
+      "NIH": "National Institute of Health",
+      "UMMC": "University of Maryland Medical Center",
+      "JHH": "Johns Hopkins Hospital",
+      "UMF": "University of Miami Florida Hospital",
+      "CC": "Cleveland Clinic"
     }
   }
 }

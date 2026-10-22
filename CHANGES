@@ -1,3 +1,8 @@
+1.0.6 2026-10-22
+  - BrainVision headers: SamplingInterval of 41 .vhdr set to 1e6 / SamplingFrequency of the run sidecar. pybv 0.2.0 had written int(1e6 / sfreq), e.g. 999 us (1001.001 Hz) for a 1000 Hz recording. The header now says 1000 us for sub-jh104 and sub-jh106 (7 runs), 500 us for sub-pt17 (3 runs), and the exact non-integer interval for 31 sub-umf/sub-ummc runs. The 41 edited .vhdr (previously git-annex files) are now plain git files. Binary data unchanged.
+  - participants.json: Levels keys of engel_score, ilae_score, ethnicity and site now match the participants.tsv values (bids-validator TSV_VALUE_INCORRECT_TYPE).
+  - README: sections 'BrainVision header sampling interval', 'participants.json levels', 'Known issues not fixed'.
+
 1.0.5 2022-08-12
   - Update README and metadata.
 1.0.4 2022-08-04

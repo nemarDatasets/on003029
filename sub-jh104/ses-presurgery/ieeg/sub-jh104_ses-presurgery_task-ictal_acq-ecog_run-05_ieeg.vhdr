@@ -1,1 +1,113 @@
-../../../.git/annex/objects/Jj/g4/MD5E-s2478--5a97354cd152a64e2b8512a7a15aa1b8.vhdr/MD5E-s2478--5a97354cd152a64e2b8512a7a15aa1b8.vhdr
+Brain Vision Data Exchange Header File Version 1.0
+;Written using pybv 0.2.0
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-jh104_ses-presurgery_task-ictal_acq-ecog_run-05_ieeg.eeg
+MarkerFile=sub-jh104_ses-presurgery_task-ictal_acq-ecog_run-05_ieeg.vmrk
+DataFormat=BINARY
+; DataOrientation: MULTIPLEXED=ch1,pt1, ch2,pt1 ...
+DataOrientation=MULTIPLEXED
+NumberOfChannels=88
+; Sampling interval in microseconds
+SamplingInterval=1000
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+; Each entry: Ch<Channel number>=<Name>,<Reference channel name>,
+; <Resolution in "unit">,<unit>,Future extensions…
+; Fields are delimited by commas, some fields might be omitted (empty).
+; Commas in channel names are coded as "\1".
+Ch1=LAF1,,1.000,nV
+Ch2=LAF3,,1.000,nV
+Ch3=LAF5,,1.000,nV
+Ch4=LAF7,,1.000,nV
+Ch5=LAF4,,1.000,nV
+Ch6=LAF6,,1.000,nV
+Ch7=LAF8,,1.000,nV
+Ch8=LMF1,,1.000,nV
+Ch9=LMF2,,1.000,nV
+Ch10=LMF3,,1.000,nV
+Ch11=LMF6,,1.000,nV
+Ch12=LMF7,,1.000,nV
+Ch13=LMF8,,1.000,nV
+Ch14=LPF1,,1.000,nV
+Ch15=LPF2,,1.000,nV
+Ch16=LPF3,,1.000,nV
+Ch17=LPF4,,1.000,nV
+Ch18=LPF5,,1.000,nV
+Ch19=LPF6,,1.000,nV
+Ch20=E,,1.000,nV
+Ch21=LPF7,,1.000,nV
+Ch22=LPF8,,1.000,nV
+Ch23=LMF4,,1.000,nV
+Ch24=LMF5,,1.000,nV
+Ch25=LFP1,,1.000,nV
+Ch26=LFP2,,1.000,nV
+Ch27=LFP3,,1.000,nV
+Ch28=LFP4,,1.000,nV
+Ch29=LFP5,,1.000,nV
+Ch30=LFP6,,1.000,nV
+Ch31=LFP7,,1.000,nV
+Ch32=LFP8,,1.000,nV
+Ch33=LAD1,,1.000,nV
+Ch34=LAD2,,1.000,nV
+Ch35=LAD3,,1.000,nV
+Ch36=LAD4,,1.000,nV
+Ch37=LAD5,,1.000,nV
+Ch38=DC01,,1.000,nV
+Ch39=DC02,,1.000,nV
+Ch40=DC03,,1.000,nV
+Ch41=DC04,,1.000,nV
+Ch42=LAD6,,1.000,nV
+Ch43=LAD7,,1.000,nV
+Ch44=$LMF4,,1.000,nV
+Ch45=$LMF5,,1.000,nV
+Ch46=LAD8,,1.000,nV
+Ch47=LHD1,,1.000,nV
+Ch48=LHD2,,1.000,nV
+Ch49=LHD3,,1.000,nV
+Ch50=LHD4,,1.000,nV
+Ch51=LHD5,,1.000,nV
+Ch52=LHD6,,1.000,nV
+Ch53=LHD7,,1.000,nV
+Ch54=LHD8,,1.000,nV
+Ch55=LAT1,,1.000,nV
+Ch56=LAT2,,1.000,nV
+Ch57=LAT3,,1.000,nV
+Ch58=LAT4,,1.000,nV
+Ch59=ABT1,,1.000,nV
+Ch60=ABT2,,1.000,nV
+Ch61=ABT3,,1.000,nV
+Ch62=ABT4,,1.000,nV
+Ch63=MBT1,,1.000,nV
+Ch64=MBT2,,1.000,nV
+Ch65=MBT3,,1.000,nV
+Ch66=MBT4,,1.000,nV
+Ch67=MBT5,,1.000,nV
+Ch68=MBT6,,1.000,nV
+Ch69=PBT1,,1.000,nV
+Ch70=PBT2,,1.000,nV
+Ch71=PBT3,,1.000,nV
+Ch72=PBT4,,1.000,nV
+Ch73=PBT5,,1.000,nV
+Ch74=PBT6,,1.000,nV
+Ch75=LPT1,,1.000,nV
+Ch76=LPT2,,1.000,nV
+Ch77=LPT3,,1.000,nV
+Ch78=LPT4,,1.000,nV
+Ch79=LPT5,,1.000,nV
+Ch80=LPT6,,1.000,nV
+Ch81=LPT7,,1.000,nV
+Ch82=LPT8,,1.000,nV
+Ch83=EKG1,,1.000,nV
+Ch84=EKG2,,1.000,nV
+Ch85=FP1,,1.000,nV
+Ch86=FP2,,1.000,nV
+Ch87=F7,,1.000,nV
+Ch88=F8,,1.000,nV
+
+[Comment]
+
